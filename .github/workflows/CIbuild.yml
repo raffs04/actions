@@ -25,4 +25,4 @@ jobs:
     - name: Run tests
       run: |
         cd one
-        pytest number.py
+        pytest -s number.py
