@@ -1,6 +1,6 @@
 import random
 
-def guessing_game():
+def test_game():
     print("Welcome to the Guessing Game!")
 
     secret_number = random.randint(1, 100)
