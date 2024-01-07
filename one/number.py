@@ -1,33 +1,14 @@
-import random
+def add_numbers(num1, num2):
+    result = num1 + num2
+    return result
 
-def guessing_game(user_input_func=input):
-    print("Welcome to the Guessing Game!")
+# Example usage
+number1 = float(input("Enter the first number: "))
+number2 = float(input("Enter the second number: "))
 
-    secret_number = random.randint(1, 100)
+sum_result = add_numbers(number1, number2)
 
-    attempts = 0
-    max_attempts = 10
+print(f"The sum of {number1} and {number2} is: {sum_result}")
 
-    while attempts < max_attempts:
-        try:
-            guess = int(user_input_func("Guess the number (between 1 and 100): "))
-            attempts += 1
-
-            if guess == secret_number:
-                print(f"Congratulations! You guessed the number in {attempts} attempts.")
-                return True
-            elif guess < secret_number:
-                print("Too low! Try again.")
-            else:
-                print("Too high! Try again.")
-
-        except ValueError:
-            print("Please enter a valid number.")
-
-    print(f"Sorry, you've run out of attempts. The correct number was {secret_number}.")
-    return False
-
-if __name__ == "__main__":
-    guessing_game()
 
 
