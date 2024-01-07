@@ -1,14 +1,9 @@
-def add_numbers(num1, num2):
-    result = num1 + num2
-    return result
+# This is a test commit
+def add(a, b):
+    return a + b
 
-# Example usage
-number1 = float(input("Enter the first number: "))
-number2 = float(input("Enter the second number: "))
-
-sum_result = add_numbers(number1, number2)
-
-print(f"The sum of {number1} and {number2} is: {sum_result}")
-
+def test_add():
+    assert add(1, 2) == 3
+    assert add(1, -1) == 0
 
 
