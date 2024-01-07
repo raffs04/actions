@@ -1,7 +1,6 @@
-#guess_game
 import random
 
-def test_game():
+def guessing_game(user_input_func=input):
     print("Welcome to the Guessing Game!")
 
     secret_number = random.randint(1, 100)
@@ -11,12 +10,12 @@ def test_game():
 
     while attempts < max_attempts:
         try:
-            guess = int(input("Guess the number (between 1 and 100): "))
+            guess = int(user_input_func("Guess the number (between 1 and 100): "))
             attempts += 1
 
             if guess == secret_number:
                 print(f"Congratulations! You guessed the number in {attempts} attempts.")
-                break
+                return True
             elif guess < secret_number:
                 print("Too low! Try again.")
             else:
@@ -25,9 +24,10 @@ def test_game():
         except ValueError:
             print("Please enter a valid number.")
 
-    else:
-        print(f"Sorry, you've run out of attempts. The correct number was {secret_number}.")
+    print(f"Sorry, you've run out of attempts. The correct number was {secret_number}.")
+    return False
 
 if __name__ == "__main__":
-    test_game()
+    guessing_game()
+
 
