@@ -25,9 +25,9 @@ jobs:
     - name: Run tests
       run: |
         cd one
-        python -m pytest -s game1.py
+        python -m pytest -s game2.py
 
     - name: Run tests with predefined input
       run: |
         cd one
-        python -c "from game1 import guessing_game; guessing_game(lambda prompt: '42')"
+        python -c "from game2 import guessing_game; guessing_game(lambda prompt: '42')"
