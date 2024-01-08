@@ -25,4 +25,4 @@ jobs:
     - name: Run tests
       run: |
         cd one
-        pytest -s game.py
+        pytest -s number.py
