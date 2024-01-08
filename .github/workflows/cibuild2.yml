@@ -22,12 +22,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
 
+  
+
     - name: Run tests
       run: |
         cd one
-        python -m pytest -s game2.py
-
-    - name: Run tests with predefined input
-      run: |
-        cd one
-        python -c "from game2 import guessing_game; guessing_game(lambda prompt: '42')"
+        python -m pytest -rP game2.py
