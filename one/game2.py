@@ -29,4 +29,4 @@ def guessing_game(get_input=input):
         print(f"Sorry, you've run out of attempts. The correct number was {secret_number}.")
 
 # Uncomment the next line if you want to run the game immediately when the file is executed
-# guessing_game()
+guessing_game()
