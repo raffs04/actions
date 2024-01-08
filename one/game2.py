@@ -1,4 +1,5 @@
 #game2.py
+
 import random
 
 def guessing_game(get_input=input):
